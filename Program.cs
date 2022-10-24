@@ -4,11 +4,7 @@
 782 -> 8
 918 -> 1
 */
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
+
 
 // Функция вывода цифры стоящей в середине трехзначногно числа.
 int InCenter(int a)
@@ -16,8 +12,10 @@ int InCenter(int a)
     
     int result = ((a / 10) % 10);
     return result;
+}
+Console.Write("Введите трехзначное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
-int number = ReadInt("Введите трехзначное число: ");
 int amount = number.ToString().Length;
 
 if (amount < 3 || amount > 3)
@@ -26,7 +24,7 @@ if (amount < 3 || amount > 3)
 }
 else
 {
-    Console.WriteLine(InCenter(number));
+    Console.WriteLine("второе число = " + InCenter(number));
 }
 
 /*Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
